@@ -26,8 +26,20 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
+            string? userInput;
             Console.Write(text);
-            string userInput = Console.ReadLine(); // Needs work -> try/catch + loop or Int.TryParse + loop
+            while (true)
+            {
+                try
+                {
+                    userInput = Console.ReadLine(); // Needs work -> try/catch + loop or Int.TryParse + loop
+                    break;
+                }
+                catch (Exception e)
+                {
+                   throw e; 
+                }
+            }
             int number = Convert.ToInt32(userInput);
             return number;
         }
@@ -46,7 +58,7 @@
             // While the user input is outside the expected range
             while (userInput < min || userInput > max)
             {
-                userInput = AskForNumber("Your previous input is not valid, try again.");
+                userInput = AskForNumber("Your previous input is not valid, try again.\n");
             }
             return userInput;
         }
