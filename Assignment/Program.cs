@@ -37,7 +37,7 @@
                 }
                 catch (Exception e)
                 {
-                   throw e; 
+                    throw e;
                 }
             }
             int number = Convert.ToInt32(userInput);
