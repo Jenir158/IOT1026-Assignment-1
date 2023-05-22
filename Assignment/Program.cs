@@ -56,7 +56,7 @@
         {
             int userInput = AskForNumber(text);
             // While the user input is outside the expected range
-            while (userInput < min || userInput > max)
+              while (userInput < min || userInput > max)
             {
                 userInput = AskForNumber("Your previous input is not valid, try again.\n");
             }
